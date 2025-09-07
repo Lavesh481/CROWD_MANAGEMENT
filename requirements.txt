@@ -1,8 +1,11 @@
+--extra-index-url https://pypi.org/simple
+--no-binary opencv-python,opencv-contrib-python
+
 # Core app
 streamlit==1.37.1
 numpy==1.26.4
 
-# Computer vision (headless only, no GUI deps)
+# Computer vision (force headless only)
 opencv-python-headless==4.10.0.84
 
 # Deep learning / YOLO
