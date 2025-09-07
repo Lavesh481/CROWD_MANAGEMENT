@@ -7,6 +7,8 @@ numpy==1.26.4
 
 # Computer vision (force headless only)
 opencv-python-headless==4.10.0.84
+opencv-python==0.0.0
+opencv-contrib-python==0.0.0
 
 # Deep learning / YOLO
 torch==2.3.1
