@@ -31,3 +31,4 @@ In the sidebar:
 ### Notes
 - YOLO provides better person counting; MediaPipe is a quick face-based fallback.
 - If you later want to use a Keras `.h5` crowd model, select "Path" and point to it (custom layers may be required).
+# CROWD_MANAGEMENT1
