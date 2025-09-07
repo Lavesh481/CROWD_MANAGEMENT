@@ -1,9 +1,16 @@
+# Core app
 streamlit==1.37.1
-opencv-python-headless==4.10.0.84
 numpy==1.26.4
-# YOLO person detector
+
+# Computer vision (headless only, no GUI deps)
+opencv-python-headless==4.10.0.84
+opencv-python==0.0.0
+opencv-contrib-python==0.0.0
+
+# Deep learning / YOLO
 torch==2.3.1
 torchvision==0.18.1
 ultralytics==8.2.81
-# MediaPipe face detection fallback
+
+# Face detection fallback
 mediapipe==0.10.14
