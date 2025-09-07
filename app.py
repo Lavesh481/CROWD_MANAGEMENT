@@ -1,3 +1,6 @@
+import os
+os.system("pip uninstall -y opencv-python opencv-contrib-python")
+
 import time
 from typing import Optional
 import cv2
