@@ -1,6 +1,7 @@
 # Crowd Safety Management (Minimal Scaffold)
 
 This Streamlit app provides real-time counting using multiple backends:
+
 - Auto: YOLO (yolov8n.pt auto-download) with fallback to MediaPipe Face Detection
 - YOLO: Ultralytics person detection (counts class `person`)
 - MediaPipe: counts visible faces (fast, lightweight)
