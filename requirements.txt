@@ -1,19 +1,16 @@
---extra-index-url https://pypi.org/simple
---no-binary opencv-python,opencv-contrib-python
-
 # Core app
 streamlit==1.37.1
 opencv-python-headless==4.10.0.84
-numpy==1.26.4
+numpy>=1.24.0
 # YOLO person detector
 --extra-index-url https://download.pytorch.org/whl/cpu
-torch==2.3.1
-torchvision==0.18.1
-ultralytics==8.2.81
+torch>=2.5.0
+torchvision>=0.20.0
+ultralytics>=8.2.0
 # MediaPipe face detection fallback
-mediapipe==0.10.14
+mediapipe>=0.10.0
 # Backend HTTP calls
-requests==2.32.3
+requests>=2.32.0
 # Auth and secrets
-streamlit-authenticator==0.4.1
-python-dotenv==1.0.1
+streamlit-authenticator>=0.4.0
+python-dotenv>=1.0.0
