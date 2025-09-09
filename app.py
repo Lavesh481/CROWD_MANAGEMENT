@@ -130,6 +130,7 @@ def send_email_alert(count: int, threshold: int) -> bool:
 	"""Send email alert when threshold is crossed."""
 	try:
 		if not (smtp_host and smtp_user and smtp_password and from_email and admin_email):
+			st.warning("⚠️ Email settings incomplete. Please configure SMTP settings in sidebar.")
 			return False
 		
 		subject = f"🚨 CROWD ALERT: Threshold Exceeded ({count} people)"
@@ -160,8 +161,19 @@ Crowd Safety Monitoring System
 			server.send_message(msg)
 		
 		return True
+	except smtplib.SMTPException as e:
+		st.error(f"SMTP Error: {e}")
+		return False
 	except Exception as e:
-		st.error(f"Failed to send email: {e}")
+		error_msg = str(e)
+		if "Name or service not known" in error_msg:
+			st.error(f"❌ Cannot resolve SMTP host '{smtp_host}'. Check your internet connection and SMTP settings.")
+		elif "Authentication failed" in error_msg:
+			st.error(f"❌ SMTP authentication failed. Check username/password (use App Password for Gmail).")
+		elif "Connection refused" in error_msg:
+			st.error(f"❌ SMTP connection refused. Check host '{smtp_host}' and port {smtp_port}.")
+		else:
+			st.error(f"❌ Email error: {e}")
 		return False
 
 
@@ -297,7 +309,7 @@ if start:
 			show_rgb = cv2.cvtColor(show, cv2.COLOR_BGR2RGB)
 		else:
 			show_rgb = show
-		frame_placeholder.image(show_rgb, channels="RGB", use_column_width=True)
+		frame_placeholder.image(show_rgb, channels="RGB", use_container_width=True)
 
 		# UI check for stop
 		if stop_placeholder.button("Stop", key=f"stop_{frame_count}"):
