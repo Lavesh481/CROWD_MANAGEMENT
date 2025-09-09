@@ -1,0 +1,6 @@
+# Minimal requirements for Streamlit Cloud deployment
+streamlit
+opencv-python-headless
+numpy
+requests
+python-dotenv
