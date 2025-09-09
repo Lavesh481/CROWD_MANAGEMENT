@@ -1,16 +1,15 @@
 # Core app
-streamlit==1.37.1
-opencv-python-headless==4.10.0.84
-numpy>=1.24.0
+streamlit
+opencv-python-headless
+numpy
 # YOLO person detector
---extra-index-url https://download.pytorch.org/whl/cpu
-torch>=2.5.0
-torchvision>=0.20.0
-ultralytics>=8.2.0
+torch
+torchvision
+ultralytics
 # MediaPipe face detection fallback
-mediapipe>=0.10.0
+mediapipe
 # Backend HTTP calls
-requests>=2.32.0
+requests
 # Auth and secrets
-streamlit-authenticator>=0.4.0
-python-dotenv>=1.0.0
+streamlit-authenticator
+python-dotenv
