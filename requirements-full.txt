@@ -1,0 +1,12 @@
+# Minimal requirements for Streamlit Cloud deployment
+# Full requirements for local development
+streamlit
+opencv-python-headless
+numpy
+requests
+python-dotenv
+# AI dependencies for crowd detection
+torch
+torchvision
+ultralytics
+mediapipe

@@ -1,6 +1,11 @@
-# Minimal requirements for Streamlit Cloud deployment
+# Streamlit Cloud compatible requirements with AI features
 streamlit
 opencv-python-headless
 numpy
 requests
 python-dotenv
+# AI dependencies - using compatible versions for Streamlit Cloud
+torch==2.1.0
+torchvision==0.16.0
+ultralytics==8.0.196
+mediapipe==0.10.3
