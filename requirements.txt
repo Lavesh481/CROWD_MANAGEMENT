@@ -1,15 +1,5 @@
-# Core app
 streamlit
 opencv-python-headless
 numpy
-# YOLO person detector
-torch
-torchvision
-ultralytics
-# MediaPipe face detection fallback
-mediapipe
-# Backend HTTP calls
 requests
-# Auth and secrets
-streamlit-authenticator
 python-dotenv
